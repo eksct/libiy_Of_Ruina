@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>SplashDash</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+    <!-- Required Start Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/icofont.min.css">
+    <!--Page Specific Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/nice-select.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<link rel="stylesheet" id="theme-change" type="text/css" href="">
+</head>
+
+<body>
+<div class="loader">
+	  <div class="spinner">
+		<img src="static/picture/loader.gif" alt="">
+	  </div> 
+	</div>
+    <!-- Main Body -->
+    <div class="page-wrapper">
+        <!-- Header Start -->
+        <div th:replace="mu.html::lets"></div>
+        <!-- Sidebar Start -->
+        <div th:replace="mu.html::side"></div>
+
+        <!-- Container Start -->
+        <div class="page-wrapper">
+            <div class="main-content">
+                <div class="from-wrapper">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="separate-form" method="post" action="lks">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <h5 class="from-title mb-1">书籍添加</h5>
+                                            <div class="row">
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="region" class="col-form-label">书籍编号</label>
+                                                        <input class="form-control" type="text" placeholder="BID" id="region"
+                                                        name="region">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="city" class="col-form-label">书籍名称</label>
+                                                        <input class="form-control" type="text" placeholder="bookName" id="city" name="city">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="province" class="col-form-label">作者</label>
+                                                        <input class="form-control" type="text" placeholder="author" id="province" name="province">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="postal" class="col-form-label">Postal</label>
+                                                        <input class="form-control" type="text" placeholder="price" id="postal" name ="postal">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="mt-4 mb-4">
+                                            <div class="form-group mb-0">
+                                                <input class="btn btn-danger" type="submit">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+				<div class="ad-footer-btm">
+					<p>Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required Script -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific Script -->
+    <script src="static/js/nice-select.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="static/js/custom.js"></script>
+</body>
+
+</html>

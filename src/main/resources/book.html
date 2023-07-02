@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>SplashDash</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <meta content="320" name="MobileOptimized">
+    <!--Start Style -->
+    <link href="static/css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/icofont.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="" id="theme-change" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+<div class="loader">
+    <div class="spinner">
+        <img alt="" src="static/picture/loader.gif">
+    </div>
+</div>
+<!-- Main Body -->
+<div class="page-wrapper">
+    <div th:replace="mu.html::lets"></div>
+    <!-- Container Start -->
+    <div class="page-wrapper">
+        <div class="main-content">
+            <!-- Page Title Start -->
+            <form action="scan" method="get">
+            <div class="row">
+                <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-title-wrapper">
+                        <div class="page-title-box ad-title-box-use">
+										<span>
+                                            <a href="lks">
+                                        <button class="bth bth-primary squer-btn sm-btn" style="background-color: #00acee; color:#ffffff;" type="button">添加书籍</button>
+                                            </a>
+                                        </span>
+                        </div>
+                        <div class="ad-breadcrumb">
+                            <ul>
+                                <li>
+                                    <div class="ad-user-btn">
+                                        <input class="form-control" id="text-input" placeholder="搜索..." type="text" name="scan">
+                                        <svg version="1.1" viewbox="0 0 56.966 56.966" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+												s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+												c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+												s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="add-group">
+                                        <input type="submit" value="搜索书籍" style="background-color: #00acee; color: #f3f3f3">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <!-- Table Start -->
+            <div class="row">
+                <!-- Styled Table Card-->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                    <div class="card table-card">
+                        <div class="card-header pb-0">
+                            <h4>书籍列表</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-holder">
+                                <div class="table-responsive">
+                                    <table class="table table-styled mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>书籍ID</th>
+                                            <th>书籍名称</th>
+                                            <th>作者</th>
+                                            <th>价格</th>
+                                            <th>书籍状态</th>
+                                            <th>删除书籍</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr th:each="books :${book}">
+                                            <td th:text="'#'+${books.getBid()}">#JH2033</td>
+                                            <td th:text="'《'+${books.getBname()}+'》'">我是书名</td>
+                                            <td th:text="${books.getAuthor()}">作者</td>
+                                            <td th:text="${books.getPrice()}">价格</td>
+                                            <td>状态</td>
+                                            <td><a th:href="'del?bid='+${books.getBid()}"><svg class="default-size " viewBox="0 0 341.333 341.333 ">
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M170.667,85.333c23.573,0,42.667-19.093,42.667-42.667C213.333,19.093,194.24,0,170.667,0S128,19.093,128,42.667 C128,66.24,147.093,85.333,170.667,85.333z "></path>
+                                                            <path d="M170.667,128C147.093,128,128,147.093,128,170.667s19.093,42.667,42.667,42.667s42.667-19.093,42.667-42.667 S194.24,128,170.667,128z "></path>
+                                                            <path d="M170.667,256C147.093,256,128,275.093,128,298.667c0,23.573,19.093,42.667,42.667,42.667s42.667-19.093,42.667-42.667 C213.333,275.093,194.24,256,170.667,256z "></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg></a></td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="text-right pt-2">
+                                <nav class="d-inline-block">
+                                    <ul class="pagination mb-0 ">
+                                        <li class="page-item" th:classappend="${now == 0 ? 'page-item disabled':'page-item'}">
+                                            <a class="page-link" th:href="'book?nows='+0" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                                        </li>
+                                        <li class="page-item" th:classappend="${now+1 == is ? 'page-item active':'page-item'}" th:each=" is : ${#numbers.sequence(1,lim)} ">
+                                            <a class="page-link"th:text="${is}" >1</a>
+                                        </li>
+                                        <li class="page-item" th:classappend="${now == lim-1 ? 'page-item disabled':'page-item'}">
+                                            <a class="page-link " th:href="'book?nows='+1"><i class="fas fa-chevron-right "></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-footer-btm">
+                <p>Copyright &copy; 2021.Company name All rights reserved.<a href="https://sc.chinaz.com/moban/" target="_blank">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Script Start -->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="libiy_Of_Ruina:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>libiy_Of_Ruina</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="libiy_Of_Ruina-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="libiy_Of_Ruina:war exploded" />
+    </root>
+  </artifact>
+</component>
